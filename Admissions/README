@@ -2,4 +2,7 @@ This is my project that converts my Java assignment to Python.
 
 It takes your school scores like SAT, ACT, and GPA, and compares two candidates to see who is the better candidate.
 
+I understand that this can be improved with functions and loops, but functions were not taught at the time of instruction.
+So I wanted to stay true to the course.
+
 This helps me practice control structures like the if and elif statements.
