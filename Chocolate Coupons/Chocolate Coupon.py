@@ -12,10 +12,7 @@ while True:  # used to repeat menu, shut down is checked later
         print("System shutting down.\n\n" + "Good bye")
         break  # ends loop and thus program
 
-    if charChoice != 'p':  # checking if input is invalid
-        print("*** Use P or S, please. ***\n")
-
-    if charChoice == 'p':  # if purchase choice is chosen
+    elif charChoice == 'p':  # if purchase choice is chosen
         if couponBalance < 7:  # starting normal transaction
             barNumber = int(input("How many chocolate bars would you like to buy?"))
 
@@ -28,16 +25,16 @@ while True:  # used to repeat menu, shut down is checked later
             else:  # checking for invalid response
                 print("*** Invalid response ***")
 
-        elif couponBalance >= 7:  # starts award transaction
+        else:  # starts award transaction`
             awardChoice = input("You qualify for a free chocolate bar. Would you like to use your credits? (Y or N) ")[
                 0]
 
-            if awardChoice == 'y' or awardChoice == 'Y':  # if user wants to use coupons
+            if awardChoice.lower() == 'y':  # if user wants to use coupons
                 couponBalance -= COUPON_REQUIREMENT
                 print("You have just used " + str(COUPON_REQUIREMENT) + " coupons and have "
                       + str(couponBalance) + " left.\nEnjoy your free chocolate bar.\n")
 
-            elif awardChoice == 'n' or awardChoice == 'N':
+            elif awardChoice.lower() == 'n':
                 barNumber = int(input("How many chocolate bars would you like to buy?"))
 
                 if barNumber >= 0:  # checking for valid input
@@ -51,4 +48,6 @@ while True:  # used to repeat menu, shut down is checked later
             else:  # if invalid input is entered
                 print("*** Invalid response ***\n")
 
-#  wow that took only 55 lines compared to the 109 lines in Java
+    else:
+        print("*** Use P or S, please. ***\n")
+
