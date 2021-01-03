@@ -1,5 +1,3 @@
-# gotta show that python is just bette than java
-
 print("This program compares two applicants to\n"
       + "determine which one seems like the stronger\n"
       + "applicant. For each candidate I will need\n"
@@ -83,5 +81,3 @@ elif overallScore1 < overallScore2:
 
 else:
     print("The two applicants seem to be equal")
-
-# yeah its definitely easier in python
