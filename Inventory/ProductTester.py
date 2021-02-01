@@ -36,6 +36,10 @@ class Product:
         return "itemNumber : " + str(self.item_num) + "\nName : " + self.name + "\nQuantity in stock : " \
                + str(self.quantity) + "\nPrice : " + str(self.price) + "\n"
 
+    def __str__(self):
+        return "itemNumber : " + str(self.item_num) + "\nName : " + self.name + "\nQuantity in stock : " \
+               + str(self.quantity) + "\nPrice : " + str(self.price) + "\n"
+
 
 # products created with default constructors
 item1 = Product()
@@ -48,12 +52,12 @@ item5 = Product(5, "Eraser", 150, 4.0)
 item6 = Product(6, "Notebook", 400, 6.75)
 
 # displaying inventory
-print(item1.str())
-print(item2.str())
-print(item3.str())
-print(item4.str())
-print(item5.str())
-print(item6.str())
+print(item1)
+print(item2)
+print(item3)
+print(item4)
+print(item5)
+print(item6)
 
 # Sample Run
 '''
